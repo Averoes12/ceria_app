@@ -14,8 +14,8 @@ class AuthScreen extends StatefulWidget {
 
 class _AuthScreenState extends State<AuthScreen> {
 
-  TextEditingController phoneNumber = TextEditingController();
-  TextEditingController password = TextEditingController();
+  TextEditingController phoneNumberController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
   ApiRepository repo = ApiRepository();
   AuthBloc authBloc;
   bool loading = false;
@@ -72,7 +72,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   color: Colors.grey.withOpacity(0.2),
                   borderRadius: BorderRadius.all(Radius.circular(45))),
               child: TextField(
-                controller: phoneNumber,
+                controller: phoneNumberController,
                 autofocus: true,
                 textAlign: TextAlign.left,
                 keyboardType: TextInputType.phone,
@@ -110,7 +110,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   color: Colors.grey.withOpacity(0.2),
                   borderRadius: BorderRadius.all(Radius.circular(45))),
               child: TextField(
-                controller: password,
+                controller: passwordController,
                 textAlign: TextAlign.left,
                 obscureText: true,
                 decoration: InputDecoration(
